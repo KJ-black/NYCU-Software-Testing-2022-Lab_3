@@ -1,0 +1,2 @@
+- name: JUnit Report Action
+  uses: mikepenz/action-junit-report@v2.9.1
