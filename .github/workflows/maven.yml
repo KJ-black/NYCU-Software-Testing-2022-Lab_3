@@ -29,17 +29,11 @@ jobs:
     - name: Publish Test Report
       if: ${{ always() }}
       uses: scacap/action-surefire-report@v1
-      
-    - name: JUnit Report Action
-      uses: mikepenz/action-junit-report@v2.9.1
-      if: always() # always run even if the previous step fails
       with:
         report_paths: '**/build/test-results/test/TEST-*.xml'
-    # Install the dependencies  
-    #- run: npm install
-    # Verify lint is happy
-    #- run: npm run lint -- --fix
-    # Build the typescript and package it for distribution
-    #- run: npm run build && npm run package
-    # Run the tests, use to debug, and test it out
-    #- run: npm test
+      
+    #- name: JUnit Report Action
+    #  uses: mikepenz/action-junit-report@v2.9.1
+    #  if: always() # always run even if the previous step fails
+    #  with:
+    #    report_paths: '**/build/test-results/test/TEST-*.xml'
