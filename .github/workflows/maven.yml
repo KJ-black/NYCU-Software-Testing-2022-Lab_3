@@ -29,8 +29,6 @@ jobs:
     - name: Publish Test Report
       if: ${{ always() }}
       uses: scacap/action-surefire-report@v1
-      with:
-        report_paths: '**/build/test-results/test/TEST-*.xml'
       
     #- name: JUnit Report Action
     #  uses: mikepenz/action-junit-report@v2.9.1
