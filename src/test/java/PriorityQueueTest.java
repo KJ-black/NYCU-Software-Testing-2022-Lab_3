@@ -1,11 +1,8 @@
 package test.java;
-
-import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.NoSuchElementException;
 import java.util.stream.Stream;
-import org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.params.provider.Arguments.arguments;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
