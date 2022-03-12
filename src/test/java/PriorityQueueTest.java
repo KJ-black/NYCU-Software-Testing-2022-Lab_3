@@ -76,5 +76,4 @@ public class PriorityQueueTest{
         String actualMessage = exception.getMessage();
         assertEquals(expectedMessage, actualMessage);
     }
-
 }
