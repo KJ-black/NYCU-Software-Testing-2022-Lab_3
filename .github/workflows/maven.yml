@@ -24,22 +24,18 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
-    - name: JUnit Report Action
-      uses: mikepenz/action-junit-report@v2.9.1
-      if: always() # always run even if the previous step fails
-      with:
-        report_paths: '**/build/test-results/test/TEST-*.xml'
+    #- name: Build with Maven
+    #  run: mvn -B package --file pom.xml
+    #- name: JUnit Report Action
+    #  uses: mikepenz/action-junit-report@v2.9.1
+    #  if: always() # always run even if the previous step fails
+    #  with:
+    #    report_paths: '**/build/test-results/test/TEST-*.xml'
     # Install the dependencies  
-    - run: npm install
-
+    #- run: npm install
     # Verify lint is happy
-    - run: npm run lint -- --fix
-
+    #- run: npm run lint -- --fix
     # Build the typescript and package it for distribution
-    - run: npm run build && npm run package
-
+    #- run: npm run build && npm run package
     # Run the tests, use to debug, and test it out
-    - run: npm test
-
+    #- run: npm test
