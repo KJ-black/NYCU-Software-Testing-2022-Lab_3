@@ -45,7 +45,7 @@ public class PriorityQueueTest{
     @Test
     public void whenExceptionThrow_thenInitialCapacityNotGreaterThanOne(){
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            PriorityQueue<Integer> test = new PriorityQueue<Integer>(0); // initial Capacity should be greater than 1
+            PriorityQueue<Integer> test = new PriorityQueue<Integer>(3); // initial Capacity should be greater than 1
         });
 
         String expectedMessage = null;
